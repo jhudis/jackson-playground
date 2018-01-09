@@ -24,6 +24,11 @@ students:
         name: "Sally"
         gpa: 3.2
         hasMealPlan: false
+    - students.MagnetStudent:
+        '@id': joe
+        grade: 11
+        name: "Joe"
+        amcScore: 130
 valedictorian:
     students.Student:
         suzan
