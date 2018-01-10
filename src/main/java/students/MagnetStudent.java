@@ -13,9 +13,9 @@ import org.jetbrains.annotations.NotNull;
 public class MagnetStudent extends Student {
 
 	/**
-	 * This student's score on the last AMC.
+	 * This student's SAT score.
 	 */
-	private final int amcScore;
+	private final int satScore;
 
 
 	/**
@@ -23,25 +23,25 @@ public class MagnetStudent extends Student {
 	 *
 	 * @param grade The grade level this student is in.
 	 * @param name  This student's name.
-	 * @param amcScore    This student's score on the last AMC.
+	 * @param satScore    This student's SAT score.
 	 */
 	@JsonCreator
 	public MagnetStudent(@JsonProperty(required = false) int grade,
 	                     @NotNull @JsonProperty(required = false) String name,
-	                     @JsonProperty(required = false) int amcScore) {
+	                     @JsonProperty(required = false) int satScore) {
 		super(grade, name, 4.0);
-		this.amcScore = amcScore;
+		this.satScore = satScore;
 	}
 
 	/**
-	 * @return This student's score on the last AMC.
+	 * @return This student's SAT score.
 	 */
-	public int getAmcScore() {
-		return amcScore;
+	public int getSatScore() {
+		return satScore;
 	}
 
 	/**
-	 * @return A string representation of this student's grade, name, GPA, and amcScore.
+	 * @return A string representation of this student's grade, name, GPA, and SAT score.
 	 */
 	@Override
 	public String toString() {
@@ -49,7 +49,7 @@ public class MagnetStudent extends Student {
 				"grade=" + getGrade() +
 				", name=" + getName() +
 				", gpa=" + getGpa() +
-				", amcScore=" + getAmcScore() +
+				", satScore=" + getSatScore() +
 				"}";
 	}
 }

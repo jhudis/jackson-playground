@@ -28,7 +28,7 @@ students:
         '@id': joe
         grade: 11
         name: "Joe"
-        amcScore: 130
+        satScore: 1530
 valedictorian:
     students.Student:
         suzan
